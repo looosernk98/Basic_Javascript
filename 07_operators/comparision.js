@@ -13,3 +13,13 @@
 
 // a is bigger than b
 // a > b OR  b < a
+
+let a = 10;
+
+if(a == 10){
+ console.log("Ten");
+}
+
+if(a !== 10){
+    console.log("Not Ten");
+}

@@ -1,5 +1,6 @@
 
-// Nullish Colescing operator ( ?? )
+// **********  Nullish Colescing operator ( ?? ) *****************
+
 // -> returns the second value (value2) if the first value (value2) is null or undefined. 
 
 // Technically, the nullish coalescing operator is equivalent to the following block:
@@ -15,13 +16,18 @@ let result = a ?? b;
 // console.log('result: ', result);
 // console.log( undefined ?? 'john')
 
-// Ternary Operator ( ? : )
+
+
+// ***************** Ternary Operator ( ? : ) **************
+
  let naam = 'shyaam';
  let fullname = (naam == 'ram') ? `${naam} prasad` : `${naam} kumar`;
 //  console.log('fullname: ', fullname);
 
 
-// Optional Chaining ( ?)
+
+// ****************** Optional Chaining ( ?) ****************
+
 // The optional chaining (?.) operator accesses an object's property or calls a 
 // function. If the object accessed or function called using this operator
 //  is undefined or null, the expression short circuits and evaluates to 
@@ -47,7 +53,10 @@ const adventurer = {
   const dogName = adventurer.dog?.name;
   console.log('dogname: ', dogName);
 
+
+
 // !! -> used to cast a variable to be a Boolean (true or false) value.
+
 let x = 0
 console.log("0 is : ", !!x) // false
 console.log(!!undefined) // false
