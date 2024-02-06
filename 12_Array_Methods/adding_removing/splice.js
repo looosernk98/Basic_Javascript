@@ -16,6 +16,12 @@ const deletedItems = arr.splice(1,2,-1, 3, 6)
 console.log('deletedItems: ', deletedItems);
 console.log('actual arr', arr);
 
+
+const arr2 = [2,4,5,0,5];
+const removedItems = arr2.splice(1,0,9) // no deletion , only addition will return empty array
+console.log('arr2: ', arr2);
+console.log('removedItems: ', removedItems); // output : []
+
 /* 
   Note : The splice() method changes the original array and returns an array 
   that contains the deleted elements
