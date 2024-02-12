@@ -58,3 +58,5 @@ const robin = { // 5k
 
   const niruIndex = arr.indexOf({ name: 'niranjan', age:26})
   console.log('niruIndex: ', niruIndex);
+
+  
