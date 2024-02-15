@@ -1,14 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
 
-    <button onclick="setTimeout(sayMessage,2000)">press on me</button>
+<body>
+    <style>
+        button {
+            width: 100px;
+            height: 30px;
+        }
+
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+      
+    </style>
     
+    <div>
+        <h2></h2>
+        <button onclick="firstTimeout(2000)">start timer 1</button>
+        <button onclick="secondTimeout(4000)">start timer 2</button>
+        <button onclick="stopFirstTimeout()">Stop timer 1</button>
+        <button onclick="stopSecondTimeout()">Stop timer 2</button>
+    </div>
+    
+
+    <!-- <button onclick="setTimeout(sayMessage,4000)">start 2</button>
+    <button onclick="setTimeout(sayMessage,4000)">start 2</button> -->
+
     <script src="set_timeout.js"></script>
 </body>
+
 </html>
