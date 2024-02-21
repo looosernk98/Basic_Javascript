@@ -15,32 +15,37 @@
                   <div class="child-box">
                     <label for="name">Full Name</label>
                     <br>
-                    <input placeholder="Enter your full name" type="text">
+                    <input id="full-name" placeholder="Enter your full name" type="text">
                   </div>
                   <div class="child-box">
                     <label for="birth-date">Birth Date</label>
                     <br>
-                    <input placeholder="Enter birth date" type="text">
+                    <input id="birth-date" placeholder="Enter birth date" type="date">
                   </div>
                   <div class="child-box">
                     <label for="email">Email</label>
                     <br>
-                    <input placeholder="Enter your email" type="text">
+                    <input id="email" placeholder="Enter your email" type="text">
                   </div>
                   <div class="child-box">
                     <label for="mobile-number">Mobile Number</label>
                     <br>
-                    <input placeholder="Enter mobile number" type="text">
+                    <input id="mobile-number" placeholder="Enter mobile number" type="text">
                   </div>
                   <div class="child-box">
-                    <label for="gender">Gender</label>
-                    <br>
-                    <input placeholder="Enter your gender" type="text">
+                   <label for="dropdown">Gender</label>
+                   <br>
+                   <select name="" id="gender">
+                    <option disabled selected value> select an option</option>
+                    <option value="male">male</option>
+                    <option value="female">female</option>
+                    <option value="other">other</option>
+                   </select>
                   </div>
                   <div class="child-box">
                     <label for="occupation">Occupation</label>
                     <br>
-                    <input placeholder="Enter occupation" type="text">
+                    <input id="occupation" placeholder="Enter occupation" type="text">
                   </div>
               </div>
          </div>
@@ -54,39 +59,40 @@
                    <div class="child-box">
                      <label for="id">ID Type</label>
                      <br>
-                     <input placeholder="Enter ID type" type="text">
+                     <input id="id-type" placeholder="Enter ID type" type="text">
                    </div>
                    <div class="child-box">
                      <label for="id-number">ID Number</label>
                      <br>
-                     <input placeholder="Enter ID number" type="text">
+                     <input id="id-number" placeholder="Enter ID number" type="number">
                    </div>
                    <div class="child-box">
                      <label for="issue">Issue Authority</label>
                      <br>
-                     <input placeholder="Enter issue department" type="text">
+                     <input id="issue-authority" placeholder="Enter issue department" type="text">
                    </div>
                    <div class="child-box">
                      <label for="issue-date">Issue Date</label>
                      <br>
-                     <input placeholder="Enter ID issue date" type="text">
+                     <input id="issue-date" placeholder="Enter ID issue date" type="date">
                    </div>
                    <div class="child-box">
                      <label for="issue-state">Issue State</label>
                      <br>
-                     <input placeholder="Enter ID issue state" type="text">
+                     <input id="issue-state" placeholder="Enter ID issue state" type="text">
                    </div>
                    <div class="child-box">
                      <label for="expiry-date">Expiry Date</label>
                      <br>
-                     <input placeholder="Enter ID expiry date" type="text">
+                     <input id="expiry-date" placeholder="Enter ID expiry date" type="date">
                    </div>
            </div>
           
 
          </div> 
-        <button type="button">Next</button>
+        <button id="btn" type="button" onclick="handleclick()">submitted</button>
 
     </div> 
+    <script src="index.js"></script>
 </body>
 </html>
