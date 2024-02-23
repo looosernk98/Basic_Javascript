@@ -23,8 +23,7 @@ fullNameEle.addEventListener("keyup", (event) => {
 
 const birthDateEle = document.getElementById("birth-date")
 birthDateEle.addEventListener("change",(event)=>{
-   userDetails.dob = event.target.value;
-   
+   userDetails.dob = event.target.value;  
 })
 
 const emailEle = document.getElementById("email")
@@ -56,8 +55,7 @@ idtypeEle.addEventListener("keyup", (event) => {
 
 const idNumberEle = document.getElementById("id-number")
 idNumberEle.addEventListener("keyup",(event)=>{
-   userDetails.idNumber = event.target.value;
-   
+   userDetails.idNumber = event.target.value;  
 })
 
 const authorityEle = document.getElementById("issue-authority")
@@ -75,6 +73,7 @@ const stateEle = document.getElementById("issue-state")
 stateEle.addEventListener("keyup",(event)=>{
  userDetails.issueState = event.target.value;
 })
+
 const expiryDateEle = document.getElementById("expiry-date")
 expiryDateEle.addEventListener("change",(event)=>{
  userDetails.expiryDate = event.target.value;
@@ -83,5 +82,12 @@ expiryDateEle.addEventListener("change",(event)=>{
 
 
 function handleclick () {
-    console.log("userdatail =",userDetails)
+    // console.log("userdatail =",userDetails)
+    localStorage.setItem("user-detail",JSON.stringify(userDetails))
+   
+ 
 }
+
+
+
+
