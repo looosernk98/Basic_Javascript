@@ -80,12 +80,36 @@ expiryDateEle.addEventListener("change",(event)=>{
 })
 
 
+let userData = JSON.parse(localStorage.getItem("user-detail"))
+console.log(userData)
+fullNameEle.value = userData.fullName
+birthDateEle.value = userData.dob
+emailEle.value = userData.email      
+mobileNumberEle.value = userData.mobileNumber
+genderEle.value = userData.gender
+occupationEle.value = userData.occupation
+idtypeEle.value = userData.idType
+idNumberEle.value = userData.idNumber
+authorityEle.value = userData.issueAthority
+issueDateEle.value = userData.issueDate
+issueState.value = userData.issueState
+expiryDateEle.value = userData.expiryDate
 
 function handleclick () {
     // console.log("userdatail =",userDetails)
     localStorage.setItem("user-detail",JSON.stringify(userDetails))
-   
- 
+    fullNameEle.value = ""
+    birthDateEle.value = ""
+    emailEle.value = ""      
+    mobileNumberEle.value = ""
+    genderEle.value = ""
+    occupationEle.value = ""
+    idtypeEle.value = ""
+    idNumberEle.value = ""
+    authorityEle.value = ""
+    issueDateEle.value = ""
+    issueState.value = ""
+    expiryDateEle.value = ""
 }
 
 
