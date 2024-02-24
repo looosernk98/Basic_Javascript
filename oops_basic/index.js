@@ -7,3 +7,6 @@
 //https://www.freecodecamp.org/news/object-oriented-javascript-for-beginners/
 
 //https://www.freecodecamp.org/news/object-oriented-programming-javascript/
+
+
+//https://javascript.info/classes

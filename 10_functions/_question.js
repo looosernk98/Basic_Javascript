@@ -1,0 +1,1 @@
+// advanatges of function - readibility, modularity, reusability

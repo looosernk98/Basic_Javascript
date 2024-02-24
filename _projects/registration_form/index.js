@@ -82,6 +82,7 @@ expiryDateEle.addEventListener("change",(event)=>{
 
 let userData = JSON.parse(localStorage.getItem("user-detail"))
 console.log(userData)
+
 fullNameEle.value = userData.fullName
 birthDateEle.value = userData.dob
 emailEle.value = userData.email      
@@ -110,6 +111,7 @@ function handleclick () {
     issueDateEle.value = ""
     issueState.value = ""
     expiryDateEle.value = ""
+    localStorage.clear()
 }
 
 
