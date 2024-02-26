@@ -70,7 +70,7 @@ function myFunction2() {
   console.log("this:: ", this);
 }
 
-myFunction2()
+// myFunction2()
 
 
 // ********************** this in Event Handlers *****************
@@ -98,6 +98,28 @@ const person1 = {
 
   // ***************** TODO : this in arrow function  ***************
 
+  // In JavaScript, a new function defines its own this value. However, this is not the case for the arrow function
+
+  const item = {
+    name: 'abc',
+    price: 267,
+    isAvailable: true,
+    color: 'blue',
+
+    printName: () => {
+       console.log('name: ', this.name);
+       console.log('this: ', this);
+    }
+  }
+
+item.printName()
+
+// const arrow = () => {
+//   console.log(this);
+// }
+
+//https://www.javascripttutorial.net/es6/javascript-arrow-function/
+//https://www.w3schools.com/js/js_arrow_function.asp
 
 
 

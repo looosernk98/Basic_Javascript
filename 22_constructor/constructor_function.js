@@ -1,4 +1,4 @@
-"use strict"
+
 
 // https://www.w3schools.com/js/js_object_constructors.asp
 
