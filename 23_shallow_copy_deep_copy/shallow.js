@@ -62,3 +62,7 @@ console.log('original: ', original);
 
 // const copy = { ...original} // spread operator always shallow copies the object
 // const copy = Object.assign({}, original)
+
+
+//https://www.javascripttutorial.net/es6/javascript-arrow-function/
+//https://makimo.com/blog/shallow-and-deep-copies-in-javascript/

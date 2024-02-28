@@ -43,5 +43,6 @@ console.log('original: ', original);
 Using Spread Operator
 Using Object.assign() method
 Using Json.parse() and Json.stringify()
+structuredClone()
 
 */
