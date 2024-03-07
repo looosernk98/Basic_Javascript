@@ -21,9 +21,9 @@ fulfilled state. If an error occurs, then it will be in a rejected state.
 
 // To create a promise object, we use the Promise() constructor.
 
-let promise = new Promise(function(resolve, reject){
-   // do something
-});
+// let promise = new Promise(function (resolve, reject) {
+//   // do something
+// });
 
 /*
 
@@ -34,44 +34,81 @@ If the promise returns successfully, the resolve() function is called. And,
 if an error occurs, the reject() function is called.
 
 
-
-
 */
 
-const count = true;
+// API
 
-let countValue = new Promise(function (resolve, reject) {
-    if (count) {
-        resolve("There is a count value.");
-    } else {
-        reject("There is no count value");
-    }
-});
+const flag = true;
 
-console.log(countValue);
+const fullfillHandler = (value) => {
+    console.log('value: ', value);
+}
+
+const rejectedHandler = (err) => {
+    console.log('err: ', err);
+}
+
+const promiseCreator = function(value){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+           if(value > 10){
+            resolve(`resolved by value ${value}`)
+           }else{
+             reject(`rejected by value ${value}`)
+           }
+        }, 3000)
+    })
+}
+
+const asyncTask1 = promiseCreator(20) // return promise object with state pending initially
+console.log('asyncTask1: ', asyncTask1);
+
+
+
+asyncTask1
+.then(fullfillHandler)
+.catch(rejectedHandler)
+
+
+// ************************* Promise Chaining  ************************
 
 /*
+ 
+if any time we came across any error , No task will performed after that, it will
+go directly in catch handler.
 
-Promises are useful when you have to handle more than one asynchronous task, 
-one after another. For that, we use promise chaining.
+Chaining is a simple concept by which we may initialize another promise inside 
+our .then() method and accordingly we may execute our results. The function 
+inside then captures the value returned by the previous promise 
+
 
 */
 
-
-// returns a promise
-
-let countValuePromise = new Promise(function (resolve, reject) {
-    resolve("Promise resolved");
-  });
-  
-  // executes when promise is resolved successfully
-  
-  countValuePromise.then(function successValue(result) {
-      console.log(result);
-    })
-    .then(function successValue1() {
-      console.log("You can call multiple functions this way.");
+function job(state) {
+    return new Promise(function(resolve, reject) {
+      if (state) {
+        resolve('success');
+      } else {
+        reject('error');
+      }
     });
+  }
+  
+  let promise = job(false);
+
+  promise.then(function() {
+    console.log('Success 1');
+    return 10;
+  }).then(function(value) {
+    console.log('value: ', value);
+    console.log('Success 2');
+    throw new Error('Error from then 2nd')
+  }).then(() => {
+    console.log('Success 3');
+  })
+  .catch(function(err) {
+    console.log('Error: ', err);
+  });
 
 
 
@@ -79,22 +116,7 @@ let countValuePromise = new Promise(function (resolve, reject) {
 
 
 
-    // returns a promise
-let countValuePromiseReject = new Promise(function (resolve, reject) {
-    reject('Promise rejected'); 
- });
- 
- console.log(countValuePromiseReject);
- // executes when promise is resolved successfully
- countValuePromiseReject.then(
-     function successValue(result) {
-         console.log(result);
-     },
-  )
- 
- // executes if there is an error
- .catch(
-     function errorValue(result) {
-         console.log(result);
-     }
- );
+
+
+
+

@@ -12,3 +12,7 @@ console.log('age: ', age);
 
 const rollNo = 24;
 console.log('rollNo: ', rollNo);
+
+// 3. Javascript is single threaded synchronous language
+
+// 4. 
