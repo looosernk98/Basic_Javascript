@@ -44,9 +44,13 @@ for(let i = 0; i<arr.length; i++){
     str = str + `<h2> ${arr[i]} <h2/> `
 }
 
-main = main + str;
+let div = document.createElement('div');
+div.innerHTML = str;
+
 
 
 let body = document.querySelector("body");
 
 body.innerHTML = main;
+
+body.appendChild(div)
