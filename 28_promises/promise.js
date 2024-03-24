@@ -1,5 +1,7 @@
 /*
 
+Promise is returned object that contains the information of the promise whether it is pending , resolved or reject state
+
 In JavaScript, a promise is a good way to handle asynchronous operations. It is 
 used to find out if the asynchronous operation is successfully completed or not.
 
