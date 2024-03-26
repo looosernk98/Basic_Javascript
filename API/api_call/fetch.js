@@ -40,20 +40,25 @@ console.log('end')
 
 // *************************** API call handling using async wait ******************
 
-// async function getTodoDataWithID (){
-//     let apiResponse = await fetch(API_URL,{
-//         method: 'GET',
-//         headers: {
-//             "Content-Type": "application/json",
-//         },
-//     })
+ console.log('start');
+async function getTodoDataWithID (){
+    console.log('start in async fn');
+    let apiResponse = await fetch(API_URL,{
+        method: 'GET',
+        headers: {
+            "Content-Type": "application/json",
+        },
+    })
 
-//     const data = await apiResponse.json();
-//     console.log('data', data)
-// }
+    const data = await apiResponse.json();
+    console.log('data', data)
+    console.log('end in async fn');
 
-// console.log()
-// getTodoDataWithID()
+}
+
+getTodoDataWithID()
+console.log('end')
+
 
 
 
