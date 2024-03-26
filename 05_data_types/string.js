@@ -10,5 +10,3 @@ const name1 = "hari";
 const result = `The names are ${name} and ${name1}`;
 console.log('result: ', typeof(result));
 
-let arr = []
-console.log('arr: ', typeof arr);
