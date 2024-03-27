@@ -67,4 +67,8 @@ console.log("The sum is " + result);
 1. Function makes the code reusable. You can declare it once and use it multiple times.
 2. Function makes the program easier as each small task is divided into a function.
 3. Function increases readability.
+
+
+// advanatges of function - readibility, modularity, reusability
+
 */
