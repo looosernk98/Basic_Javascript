@@ -41,7 +41,7 @@ async function getData () {
    //  console.log('totalUserRows: ', totalUserRows);
 
    }
-   let tableData = document.querySelector(".bdata")
+   let tableData = document.querySelector(".tbody")
    
    tableData.innerHTML = totalUserRows
    
@@ -66,12 +66,13 @@ promise.then((response)=>{
 })
 
 .then((data)=>{
-    console.log(data)
+   //  console.log(data)
 
     let totalUserRows = ''
     console.log(totalUserRows)
-    for(let i=0; i<data.lenght;i++){
+    for(let i=0; i<data.length;i++){
       let user = data[i]
+      console.log(user)
       let userRow = 
       ` <tr>
           <td>${user.id}</td>
@@ -82,10 +83,11 @@ promise.then((response)=>{
           <td>${user.company.name}</td>
        </tr>
       `
+      console.log(userRow)
       totalUserRows += userRow
     }
 
-    let tableData = document.querySelector(".bdata")
+    let tableData = document.querySelector(".tbody")
     tableData.innerHTML = totalUserRows
 })
 
