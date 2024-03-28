@@ -5,110 +5,94 @@
 // pagination
 // filter and search
 
-// let user1 = {
-//     name: "rohit",
-//     age: 24,
-//     id: 321,
-//     salary: 15000
-// }
 
+/*
 
-// const API_URL = 'https://jsonplaceholder.typicode.com/users'
+const API_URL = 'https://jsonplaceholder.typicode.com/users'
 
-let totalUsers = [ 
-{
-   name: "rohit",
-   age: 24,
-   id: 321,
-   salary: 15000
-}, 
-{
-   name: "rakesh",
-   age: 26,
-   id: 968,
-   salary: 15000
-},
-{
-   name: "ruhi",
-   age: 21,
-   id: 755,
-   salary: 12000
-},
-// {
-//     name: "rohit",
-//     age: 24,
-//     id: 321,
-//     salary: 15000
-//  }, 
-//  {
-//     name: "rakesh",
-//     age: 26,
-//     id: 968,
-//     salary: 15000
-//  },
-//  {
-//     name: "ruhi",
-//     age: 21,
-//     id: 755,
-//     salary: 12000
-//  }
-]
+async function getData () {
+   let fetchData = await fetch(API_URL,{
+        method: "Get",
+        headers:{
+         "content-type": "application/json",
+        },
+   })
+   let data = await fetchData.json()
+   // console.log(data)
 
-// const allTr = 
-// `<tr>
-//     <td>rohit</td>
-//     <td>321</td>
-//     <td>24</td>
-//     <td>15000</td>
-// </tr>
-// +
-// <tr>
-//     <td>rakesh</td>
-//     <td>968</td>
-//     <td>26</td>
-//     <td>15000</td>
-// </tr>
-// +
-// <tr>
-//     <td>rohit</td>
-//     <td>21</td>
-//     <td>755</td>
-//     <td>12000</td>
-// </tr>
-// `
+   let totalUserRows = '';
 
-let totalUserRows = '';
-for(let i=0;i<totalUsers.length;i++){
-  let user = totalUsers[i];
-  
-  let userRow = 
-  `<tr>
-    <td>${user.name}</td>
-    <td>${user.id}</td>
-    <td>${user.age}</td>
-    <td>${user.salary}</td>
- </tr>`
- console.log('userRow: ', i, userRow);
+   for(let i=0;i<data.length;i++){
+     let user = data[i];
+     
+     let userRow = 
+     `<tr>
+       <td>${user.id}</td>
+       <td>${user.username}</td>
+       <td>${user.email}</td>
+       <td>${user.address.city}</td>
+       <td>${user.phone}</td>
+       <td>${user.company.name}</td>
+    </tr>`
+   //  console.log('userRow: ', i, userRow);
+   
+   
+    totalUserRows += userRow
+   //  console.log('totalUserRows: ', totalUserRows);
 
+   }
+   let tableData = document.querySelector(".bdata")
+   
+   tableData.innerHTML = totalUserRows
+   
+} 
+getData()
 
- totalUserRows += userRow
- console.log('totalUserRows: ', totalUserRows);
-}
+*/
 
-let tbody = document.querySelector('.tbody');
+const API_URL = 'https://jsonplaceholder.typicode.com/users'
 
-tbody.innerHTML = totalUserRows
+ function getData () {
 
+let promise = fetch (API_URL,{
+          method: "GET",
+          headers:{
+            "content-type": "application/json",
+          }
+})
 
+promise.then((response)=>{
+     return  response.json()
+})
 
+.then((data)=>{
+    console.log(data)
 
+    let totalUserRows = ''
+    console.log(totalUserRows)
+    for(let i=0; i<data.lenght;i++){
+      let user = data[i]
+      let userRow = 
+      ` <tr>
+          <td>${user.id}</td>
+          <td>${user.username}</td>
+          <td>${user.email}</td>
+          <td>${user.address.city}</td>
+          <td>${user.phone}</td>
+          <td>${user.company.name}</td>
+       </tr>
+      `
+      totalUserRows += userRow
+    }
 
+    let tableData = document.querySelector(".bdata")
+    tableData.innerHTML = totalUserRows
+})
 
+promise.catch((error)=>{
+    console.log(error)
+})
 
+}  
 
-
-
-
-// let arr = [4,7,9,2,65]
-
-// arr[0]
+getData()
