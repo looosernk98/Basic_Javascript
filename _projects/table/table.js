@@ -50,9 +50,11 @@ getData()
 
 */
 
-const API_URL = 'https://jsonplaceholder.typicode.com/users'
+let tableBody = document.querySelector(".tbody")
 
- function getData () {
+tableBody.innerHTML = '<h2>Loading ...</h2>'
+
+const API_URL = 'https://jsonplaceholder.typicode.com/users'
 
 let promise = fetch (API_URL,{
           method: "GET",
@@ -66,35 +68,36 @@ promise.then((response)=>{
 })
 
 .then((data)=>{
-   //  console.log(data)
+   let length = data.length; // 10
+   let start = length + 1;  // 11
+   let end = length*10;  // 100
+  
+  let totalData = [...data];
+   for(let i = start; i<=end; i++){
+     let idealIndexForExistingData = (i-1)%10;
+     totalData.push({...data[idealIndexForExistingData], id: i,});
+   }
 
     let totalUserRows = ''
-    console.log(totalUserRows)
-    for(let i=0; i<data.length;i++){
-      let user = data[i]
-      console.log(user)
+    for(let i=0; i<totalData.length;i++){
+      let user = totalData[i]
       let userRow = 
       ` <tr>
-          <td>${user.id}</td>
-          <td>${user.username}</td>
-          <td>${user.email}</td>
-          <td>${user.address.city}</td>
-          <td>${user.phone}</td>
-          <td>${user.company.name}</td>
+          <td>${user?.id}</td>
+          <td>${user?.username}</td>
+          <td>${user?.email}</td>
+          <td>${user?.address.city}</td>
+          <td>${user?.phone}</td>
+          <td>${user?.company.name}</td>
        </tr>
       `
-      console.log(userRow)
+      // console.log(userRow)
       totalUserRows += userRow
     }
 
-    let tableData = document.querySelector(".tbody")
-    tableData.innerHTML = totalUserRows
+    tableBody.innerHTML = totalUserRows
 })
 
 promise.catch((error)=>{
     console.log(error)
 })
-
-}  
-
-getData()
