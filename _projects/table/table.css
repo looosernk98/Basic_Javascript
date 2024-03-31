@@ -5,19 +5,23 @@
 
 .container{
     padding: 10px;
+    
+    
+}
+
+.table-pagination{
+    display: flex;
+    margin-top: 10px;
 }
 
 table{
-    
     width: 100%;
+  
 }
 
 
 td{
-    
     text-align: center;
-    
-    
 }
 
 
@@ -33,31 +37,42 @@ th,td{
 }
 
 
+.btn{
+    margin: 5px;
+    height: 40px;
+    width: 80px;
+    border: 1px solid;
+    border-radius: 5px;
+    text-align: center;
+    align-content: center;
+    text-align:center;
+   
 
-
-
-
-
-
-
-
-
-/*
-
-table{
-    border: 1px solid black;
-    padding: 5px;
-    width: 100%;
 }
 
-tr{
+.box2{
+    /* border: 1px solid red; */
     display: flex;
-    justify-content: space-between;
+    
 }
 
-td,th{
-    width: 25%;
+.ten-box{
+    margin: 5px;
+    align-content: center;
+    text-align:center;
+    height: 40px;
+    width: 80px;
+    border: 1px solid blue;
+    border-radius: 5px;
 }
 
-*/
+
+
+
+
+
+
+
+
+
 
