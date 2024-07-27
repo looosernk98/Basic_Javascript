@@ -19,4 +19,9 @@ for(let i=0;i<=9;i++){
 
   box2.innerHTML = totalBox
 
+
+
+
+
+
   

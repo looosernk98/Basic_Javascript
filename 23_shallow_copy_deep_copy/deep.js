@@ -40,9 +40,14 @@ console.log('original: ', original);
 /*
   To create a deep copy, we can use the following methods:
 
-Using Spread Operator
-Using Object.assign() method
+// Using Spread Operator
+// Using Object.assign() method
 Using Json.parse() and Json.stringify()
 structuredClone()
 
 */
+const copy2 = structuredClone(original)
+copy2.name = "abcd"
+copy2.hobbies.push('extra skill')
+console.log('original:', original);
+console.log('copy2: ', copy2);

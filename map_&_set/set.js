@@ -15,6 +15,7 @@
 let set = new Set();
 
 let john = { name: "John" };
+let john2 = { name: "John" };
 let pete = { name: "Pete" };
 let mary = { name: "Mary" };
 
@@ -24,6 +25,7 @@ set.add(pete);
 set.add(mary);
 set.add(john);
 set.add(mary);
+set.add(john2);  // in case of non-primitive, map checks address not value , but in case of primitive it compares value
 
 // set keeps only unique values
 console.log( set.size ); // 3

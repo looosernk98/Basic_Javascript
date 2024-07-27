@@ -1,6 +1,7 @@
 
 /*
     type    scope                         reassign      redeclare
+
     var     golbal, function               true          true
     let     global,block,function          true          false
     const   global,block,function          false         false

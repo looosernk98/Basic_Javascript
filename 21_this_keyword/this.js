@@ -114,9 +114,11 @@ const person1 = {
 
 item.printName()
 
-// const arrow = () => {
-//   console.log(this);
-// }
+const arrow = () => {
+  console.log("this:: ",this);
+}
+arrow()
+console.log(this);
 
 //https://www.javascripttutorial.net/es6/javascript-arrow-function/
 //https://www.w3schools.com/js/js_arrow_function.asp

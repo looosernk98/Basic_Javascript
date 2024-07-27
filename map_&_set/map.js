@@ -21,6 +21,8 @@ map.set('1', 'str1');   // a string key
 map.set(1, 'num1');     // a numeric key
 map.set(true, 'bool1'); // a boolean key
 
+console.log('map: ', map);
+
 // remember the regular Object? it would convert keys to string
 // Map keeps the type, so these two are different:
 console.log( map.get(1)   ); // 'num1'
@@ -37,3 +39,9 @@ map.set('1', 'str1')
 
 //The iteration goes in the same order as the values were inserted. Map 
 // preserves this order, unlike a regular Object.
+
+map.forEach((value, key, map) => {
+  console.log('key: ', key);
+  console.log('value: ', value);
+
+})
