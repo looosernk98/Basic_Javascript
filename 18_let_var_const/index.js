@@ -16,6 +16,8 @@
     var a = 10 // var is not blocked scope, we can acess it from outside of this block
 
 }
+console.log('a: ', a);
+
 var c ;
 function func1(){
     var b = 20
@@ -27,6 +29,7 @@ function func1(){
 
 func1()
 console.log('c: ', c);
+console.log(b)
 
 // console.log('b: ', b); // not accessible outside of func1 bcoz var is function scoped
 

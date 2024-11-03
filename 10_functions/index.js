@@ -8,6 +8,27 @@
 // 2. user-defined 
 
 
+/*
+
+Function can be ended by two ways:
+-> when all lines of code executed
+-> when return is encountered
+
+function A(){
+    console.log(answer);
+}
+A()
+
+function B(){
+    return ans;
+}
+const res = B()
+console.log('res: ', res);
+
+*/
+
+
+
 
 //The syntax to declare a function is:
 function nameOfFunction () {
