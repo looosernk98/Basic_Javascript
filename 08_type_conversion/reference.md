@@ -1,0 +1,1 @@
+https://www.freecodecamp.org/news/loose-vs-strict-equality-in-javascript/#:~:text=Triple%20equals%20(%3D%3D%3D)%2C%20also%20referred%20to%20as,they%20do%2C%20it%20returns%20false%20.

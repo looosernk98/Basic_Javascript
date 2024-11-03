@@ -28,7 +28,7 @@ set.add(mary);
 set.add(john2);  // in case of non-primitive, map checks address not value , but in case of primitive it compares value
 
 // set keeps only unique values
-console.log( set.size ); // 3
+console.log( set.size ); // 4
 
 for (let user of set) {
   console.log(user.name); // John (then Pete and Mary)

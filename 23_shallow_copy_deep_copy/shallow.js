@@ -1,6 +1,9 @@
 /*
 
--> Shallow copy and deep copy are two different approaches to copying objects or data structures
+When you create a shallow copy, a new object is created. The new object has 
+its own copy of the top-level properties of the original object. However, 
+if any of those properties are objects themselves (nested objects), they 
+are still referenced rather than fully copied.
 
 Shallow Copy:
 
@@ -24,26 +27,26 @@ Use shallow copy when:
 
 */
 
-const original = {
-    name: "alex",
-    age: 23,
-    state: 'delhi',
-    hobbies: ['badminton', 'cricket', 'watching movies'],
-    family: {
-      father_name: 'mohan',
-      father_age: 45,
-      hobbies: ["reading"]
-    }
-}
-const copy = original
 
 
+/*
 
-copy.name = "byran"
-copy.hobbies.push('listening music')
+Directly assigning an object to another variable does not create a copy at all; 
+instead, it creates a reference to the original object. This means both 
+variables point to the same object in memory.
 
-console.log('copy: ', copy);
-console.log('original: ', original);
+ const copy = original // not a shallow copy
+*/
+
+
+const originalObject = { a: 1, b: { c: 2 } };
+const shallowCopy = { ...originalObject }; // Shallow copy using spread operator
+
+shallowCopy.a = 99;
+console.log(originalObject.a); // Output: 1 (originalObject is NOT modified)
+
+shallowCopy.b.c = 42;
+console.log(originalObject.b.c); // Output: 42 (nested object IS modified)
 
 
 
@@ -60,8 +63,6 @@ console.log('original: ', original);
 
 */
 
-// const copy = { ...original} // spread operator always shallow copies the object
-// const copy = Object.assign({}, original)
 
 
 //https://www.javascripttutorial.net/es6/javascript-arrow-function/

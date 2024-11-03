@@ -43,5 +43,4 @@ map.set('1', 'str1')
 map.forEach((value, key, map) => {
   console.log('key: ', key);
   console.log('value: ', value);
-
 })
