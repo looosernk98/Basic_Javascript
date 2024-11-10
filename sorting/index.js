@@ -48,6 +48,17 @@ const numbers = [25, 100, 1, -2, 30, 29]
 numbers.sort(compareFn)
 console.log('numbers in descending: ', numbers);
 
+function example(a) {
+   console.log(a); // Output ?
+   var a = 20;
+   console.log(a); // Output ?
+   function a() {}
+   console.log(a); // Output ?
+}
+
+example(10);
+
+
 
 
 
