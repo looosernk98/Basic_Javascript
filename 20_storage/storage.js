@@ -3,6 +3,17 @@
 // https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
 
 // ****************** Local Storage ************************
+/*
+
+| Action                   | `localStorage` | `sessionStorage` |
+|--------------------------|----------------|------------------|
+| Click link (`_blank`)    | ✅ shared       | ❌ fresh          |
+| Duplicate tab            | ✅ shared       | ✅ copied (shallow) |
+| Manual new tab + URL     | ✅ shared       | ❌ fresh          |
+| Reload page              | ✅ shared       | ✅ same session   |
+| Close and reopen tab     | ✅ persists     | ❌ gone           |
+
+*/
 
 /*
 The localStorage object allows you to save key/value pairs in the browser.

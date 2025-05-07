@@ -3,7 +3,7 @@
 
 // Post increment(x++) -> the increment operator increments and returns the value before incrementing.
  let a = 9; 
- let b = 1 + a++ + 7 + a++; // 1 + 9 + 10
+ let b = 1 + a++ + 7 + a++; // 1 + 9 + 7 + 10
  console.log('values ',a,  b);
 
  let x = 2;

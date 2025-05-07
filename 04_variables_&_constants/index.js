@@ -18,7 +18,7 @@ console.log('username: ', username);
 
 var y = x
 console.log('y: ', y);
-// console.log('x: ', x);
+console.log('x: ', x);
 
 
 // num = 8

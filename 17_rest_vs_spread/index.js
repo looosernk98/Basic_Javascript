@@ -5,7 +5,7 @@
 
 /*
 The rest parameter syntax allows a function to accept an indefinite number
- of arguments as an array
+of arguments as an array
 
  -> also while destructing
 */

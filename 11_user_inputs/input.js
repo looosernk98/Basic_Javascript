@@ -2,6 +2,7 @@ const a =  process.argv[2] === 'N' ? process.argv[2]:  Number(process.argv[2]) /
 const b = process.argv[3] === 'N' ? process.argv[3]: Number(process.argv[3]); // "7", '3'
 const optr = process.argv[4]; // "+" , "-" , "*" ,"/"
 console.log('inputs : ', a, b, optr);
+
 function sum(a, b, optr){
   if(optr == "+"){
     return a + b;
