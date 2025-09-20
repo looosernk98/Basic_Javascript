@@ -22,3 +22,15 @@ const user={
 
 const obj = Object.assign({a:10}, car, user);
 console.log(obj)
+
+
+// =================== Shallow copy only =====================
+const obj2 = { name: "Niranjan", nested: { age: 25 } };
+
+const copy = Object.assign({}, obj2);
+
+copy.nested.age = 30;
+
+console.log(obj2.nested.age); // 30 (❌ changed original too)
+
+// 👉 Object.assign() only makes a shallow copy (nested objects are still references).

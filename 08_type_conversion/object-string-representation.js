@@ -6,6 +6,7 @@
 
 */
 const obj = { name: "Alex" };
+console.log(obj.valueOf());  // return object itself
 console.log(String(obj));  // [object Object]
 
 /*

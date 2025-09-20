@@ -14,5 +14,5 @@
 
 // pre increment(++x) -> the increment operator increments and returns the value after incrementing.
 let c = 2;
-let d = c-- + c++ + --c + c++;
+let d = c-- + c++ + --c + c++; // 2 + 1 + 1 + 1
 console.log("values of c , d: ", c, d)

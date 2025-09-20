@@ -138,6 +138,7 @@ console.log(...arrValue); // My name is Jack
   
  
   const obj = { ...true, ..."test", ...10 };
+  console.log(obj)
   // { '0': 't', '1': 'e', '2': 's', '3': 't' }
 
   When using spread syntax for function calls, be aware of the possibility

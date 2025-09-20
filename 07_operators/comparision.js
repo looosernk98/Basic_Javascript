@@ -23,3 +23,34 @@ if(a == 10){
 if(a !== 10){
     console.log("Not Ten");
 }
+
+/*
+
+ 1. == (Loose Equality)
+
+-> Compares two values after type coercion.
+-> If the types are different, JavaScript tries to convert them to the same type 
+   before comparing.
+
+Example:
+
+5 == "5"      // true  (string "5" is converted to number 5)
+0 == false    // true  (false is converted to 0)
+null == undefined // true (special case in JS)
+
+
+2. === (Strict Equality)
+
+-> Compares two values without type coercion.
+-> Both the value and the type must match.
+
+Example:
+
+5 === "5"     // false (number !== string)
+0 === false   // false (number !== boolean)
+null === undefined // false
+
+
+*/
+
+
