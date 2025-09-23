@@ -15,6 +15,15 @@ Server error responses (500 – 599)
 // 100, 101, 102, 200, 201, 202, 204, 300, 301,302, 400, 401, 403,404, 500, 501
 
 /*
+
+=========================== Informational Codes (1xx) ========================
+
+100 Continue: Server received the headers and the client should continue sending the 
+              request body (useful for large uploads).
+
+101 Switching Protocols: Client asked to switch protocols (e.g., HTTP → WebSocket) 
+                         and the server agrees.
+                         
 =========================== Success Codes (2xx) ========================
 
 200 OK : Standard response for a successful HTTP request.

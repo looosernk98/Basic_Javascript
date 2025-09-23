@@ -28,10 +28,11 @@ const actors = ["Sanjay Dutt", 'akshay kumar', 'katrina', 'Salman khan']
 actors.sort() // ascending order with case sensitive example
 console.log('actors: ', actors);
 
-const numbers = [25, 100, 1, -2, 30, 29]
+const numbers = [25, 100, 1, -20, 30, 29]
 // sort methods compare numbers by converting them in string first
+numbers.sort()
 // numbers.sort().reverse()
-// console.log('numbers: ', numbers);
+console.log('numbers: ', numbers);
 
 /* 
  writing compare function itself to sort in desending order

@@ -30,3 +30,12 @@ Here is an overview of what happens at each step of the cycle:
 3. `Release memory` — now is the time to release the entire memory that you don’t need so that it can become free and available again. As with the Allocate memory operation, this one is explicit in low-level languages.
 
 
+## Best Practices for Memory Management
+
+Use let/const (avoid accidental globals).
+Clear intervals/timeouts when not needed (clearInterval, clearTimeout).
+Remove event listeners when elements are removed.
+Be careful with closures holding large data.
+Use tools like Chrome DevTools → Memory tab to profile memory usage.
+
+

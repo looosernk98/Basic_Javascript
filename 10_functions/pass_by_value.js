@@ -87,8 +87,12 @@ let userList = [
     { name : 'hales', age: 45}
 ]
  
-function printUserList(){
-  
+function printUserList(list){
+  list[0] = {name: "alex", age: 13};
+  console.log('list: ', list);
 }
 
 printUserList(userList)
+console.log('userList: ', userList);
+
+
