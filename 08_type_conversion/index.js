@@ -64,3 +64,15 @@ console.log(undefined == undefined) // true
 console.log(undefined === NaN)
 console.log(undefined + NaN)
 console.log(null + NaN)
+
+
+
+// ===========================================================
+
+console.log("A" - 1); // NaN
+console.log("Hello" - "World!"); // NaN - NaN = NaN
+
+
+// + has a special case (string concatenation).
+// But -, *, /, %, etc. always expect numbers → if a string can’t be converted 
+// into a number, you get NaN.

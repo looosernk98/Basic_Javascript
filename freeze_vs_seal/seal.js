@@ -19,3 +19,10 @@ obj.city = "Delhi"; // ❌ Not allowed
 delete obj.name;    // ❌ Not allowed
 
 console.log(obj);   // { name: "Niranjan", age: 30 }
+
+
+
+const numbers = [12,3,4]
+Object.seal(numbers)
+numbers.push(100) // no effect but throw error
+console.log(numbers)

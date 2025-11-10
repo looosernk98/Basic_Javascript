@@ -26,7 +26,7 @@ let result = a ?? b;
 
 
 
-// ****************** Optional Chaining ( ?) ****************
+// ****************** Optional Chaining ( ?.) ****************
 
 // The optional chaining (?.) operator accesses an object's property or calls a 
 // function. If the object accessed or function called using this operator
